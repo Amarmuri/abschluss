@@ -1,0 +1,318 @@
+
+/* Grundlegendes Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #003300;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #00b400;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ccffcc;
+}
+
+/* Mobile Menü Button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Menü */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #00a500;
+  padding: 1rem;
+}
+
+.mobile-menu a {
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid #009700;
+}
+
+.mobile-menu a:hover {
+  background-color: #004d00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+}
+
+/* Platzhalter für Inhalt */
+.content {
+  padding: 7rem 2rem 2rem 2rem;
+  text-align: center;
+}
+.hero {
+    background: linear-gradient(to right, #006600, #009900);
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-top: 4rem; /* wegen der Navbar */
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    background-color: white;
+    color: #006600;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .hero-btn:hover {
+    background-color: #ccffcc;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  .countdown-section {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f4fff4;
+    color: #018f01;
+  }
+
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  .countdown div {
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 100, 0, 0.2);
+  }
+
+  .countdown span {
+    font-weight: bold;
+    display: block;
+    font-size: 2.5rem;
+  }
+
+  .countdown small {
+    font-size: 0.9rem;
+    color: #004d00;
+  }
+
+  @media (max-width: 600px) {
+    .countdown {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  .event-info {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    color: #003300;
+  }
+
+  .event-info h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #006600;
+  }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .info-card {
+    background-color: #f0fff0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 100, 0, 0.1);
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #006600;
+  }
+
+  .info-card a {
+    color: #006600;
+    text-decoration: underline;
+  }
+
+  .info-card a:hover {
+    color: #00aa00;
+  }
+  .cta-section {
+    background-color: #006600;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: white;
+    color: #006600;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .cta-button:hover {
+    background-color: #ccffcc;
+    color: #003300;
+  }
+  .menu-section {
+    padding: 4rem 2rem;
+    background-color: #f0fff0;
+    text-align: center;
+    color: #003300;
+  }
+
+  .menu-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #006600;
+  }
+
+  .menu-category {
+    margin-bottom: 3rem;
+  }
+
+  .menu-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #009900;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .menu-list li {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 100, 0, 0.1);
+  }
+
+  @media (max-width: 600px) {
+    .menu-list li {
+      font-size: 0.95rem;
+    }
+  }
+  .site-footer {
+    background-color: #006600;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    margin-top: 3rem;
+  }
+
+  .site-footer p {
+    margin: 0;
+  }

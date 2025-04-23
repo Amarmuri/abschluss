@@ -1,0 +1,102 @@
+    /* Grundlegendes Styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #003300;
+      }
+  
+      /* Header */
+      header {
+        background-color: #006600;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+  
+      header h1 {
+        font-size: 2.5rem;
+      }
+  
+      /* Formularbereich */
+      .form-container {
+        padding: 4rem 2rem;
+        max-width: 600px;
+        margin: 3rem auto;
+        background-color: #f0fff0;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 100, 0, 0.1);
+      }
+  
+      .form-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #006600;
+      }
+  
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+  
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+  
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        border: 2px solid #006600;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #003300;
+      }
+  
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: #009900;
+        outline: none;
+      }
+  
+      .form-group textarea {
+        resize: vertical;
+        height: 150px;
+      }
+  
+      .form-button {
+        display: inline-block;
+        background-color: #006600;
+        color: white;
+        padding: 1rem 2rem;
+        font-weight: bold;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+        text-align: center;
+      }
+  
+      .form-button:hover {
+        background-color: #009900;
+      }
+  
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 2rem;
+        background-color: #006600;
+        color: white;
+      }

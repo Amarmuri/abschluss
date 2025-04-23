@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salier Abschlussfeier 2025</title>
+  <link rel="stylesheet" href="stlye.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Abschlussfeier</div>
+    <div class="nav-links">
+      <a href="index.html">Start</a>
+      <a href="info.html">Infos</a>
+      <a href="anmeldung.html">Anmeldung</a>
+      <a href="playlist.html">Playlist</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Start</a>
+    <a href="info.html">Infos</a>
+    <a href="anmeldung.html">Anmeldung</a>
+    <a href="playlist.html">Playlist</a>
+  </div>
+
+  <!-- Hauptinhalt -->
+  <div class="content">
+    <h1>Herzlich Willkommen zur Salier Gemeinschaftsschule!</h1>
+    <p>Klassen 10.1 und 10.2</p>
+  </div>
+
+  <!-- Script für Mobile Menü -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+    });
+  </script>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Feier mit uns den Abschluss 2025!</h1>
+      <p>Ein unvergesslicher Abend voller Emotionen, Musik & Erinnerungen wartet auf dich.</p>
+      <a href="anmeldung.html" class="hero-btn">Jetzt anmelden</a>
+    </div>
+  </section>
+  <section class="countdown-section">
+    <h2>Countdown bis zur Feier 🎓</h2>
+    <div class="countdown" id="countdown">
+      <div><span id="days">00</span><small>Tage</small></div>
+      <div><span id="hours">00</span><small>Stunden</small></div>
+      <div><span id="minutes">00</span><small>Minuten</small></div>
+      <div><span id="seconds">00</span><small>Sekunden</small></div>
+    </div>
+  </section>
+  <script> const targetDate = new Date("2025-07-17T18:00:00").getTime();
+
+  const countdown = () => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "🎉 Es ist Zeit zu feiern!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = String(days).padStart(2, "0");
+    document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+  };
+
+  setInterval(countdown, 1000);
+  countdown(); // Sofort starten
+</script>
+<section class="event-info" id="infos">
+    <h2>📍 Veranstaltungsdetails</h2>
+    <div class="event-grid">
+      <div class="info-card">
+        <h3>📅 Datum</h3>
+        <p>17. Juli 2025</p>
+      </div>
+      <div class="info-card">
+        <h3>⏰ Uhrzeit</h3>
+        <p>18:00 Uhr - 20:00 Uhr</p>
+      </div>
+      <div class="info-card">
+        <h3>📍 Ort</h3>
+        <p>Salier Gemeinschaftsschule Waiblingen<br><a href="https://www.google.com/maps/place/Salier-Gemeinschaftsschule/@48.8368978,9.3271567,17z/data=!3m1!4b1!4m6!3m5!1s0x4799c8bd0c3102f7:0x41af84547de63ebd!8m2!3d48.8368943!4d9.3297316!16s%2Fg%2F12hlwwym4?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNjM5SAFQAw%3D%3D" target="salier-gemeinschaftsschule">Zur Karte</a></p>
+      </div>
+      <div class="info-card">
+        <h3>👗 Dresscode</h3>
+        <p>Elegant & festlich</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <h2>🍽️ Unser Menü</h2>
+   <div class="menu-category">
+      <h3>🥤 Getränke</h3>
+      <ul class="menu-list">
+        <li><strong>Softdrinks</strong> – Cola, Fanta, Sprite</li>
+        <li><strong>Cocktails</strong> – Alkoholfreie Cocktails 🍹</li>
+        <li><strong>Saftbar</strong> – Apfel, Orange, Multivitamin 🍊</li>
+        <li><strong>Kaffee & Tee</strong> – Für den Abend danach ☕</li>
+      </ul>
+    </div>
+    <div class="menu-category">
+        <h3>🍔 Essen</h3>
+        <ul class="menu-list">
+          <li><strong>Brezeln</strong> – Frisch gebacht 🌱</li>
+          <li><strong>Snacks</strong> – Fingerfood & mehr 🍟</li>
+        </ul>
+      </div>
+  </section>
+  <section class="cta-section">
+    <h2>🎉 Sei dabei und feier mit uns!</h2>
+    <p>Verpass nicht den besten Abend unseres Schuljahres – tolle Musik, leckeres Essen und unvergessliche Momente erwarten dich.</p>
+    <a href="anmeldung.html" class="cta-button">Jetzt anmelden</a>
+  </section>
+  <footer class="site-footer">
+    <p>© 2025 Abschlussfeier – erstellt von Amar Muric</p>
+  </footer>
+
+
+</body>
+</html>
